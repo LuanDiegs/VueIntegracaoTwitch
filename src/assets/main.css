@@ -1,0 +1,55 @@
+@import './base.css';
+
+#app {
+  padding: 1rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+#chatTitulo{
+  margin-bottom: 1%;
+}
+
+.chat{
+  width: 100%;
+  border: 1px solid black;
+  background-color: #1f1c1c;
+  border-radius: 5px;
+  padding: 5px;
+  height: 35em;
+  margin: 0em;
+}
+
+.mensagemCompleta{
+  background-color: #2e2b2b;
+  color: white;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 5px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
