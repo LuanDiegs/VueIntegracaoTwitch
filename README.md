@@ -1,29 +1,19 @@
-# vueIntegracaoTwitch
+# VueIntegracaoTwitch
 
-This template should help get you started developing with Vue 3 in Vite.
+Como configurar e inicializar o projeto.
 
-## Recommended IDE Setup
+## IDE recomendada
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Setup do projeto
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Rodar o programa
 
 ```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+npm start
 ```
