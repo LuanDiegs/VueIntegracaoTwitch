@@ -27,6 +27,14 @@ a,
   margin: 0em;
 }
 
+.swal2-popup.swal2-toast .swal2-title {
+  font-size: 0.9rem !important;
+}
+
+.swal2-popup.swal2-toast .swal2-success{
+  width: 0em !important;
+}
+
 .mensagemCompleta{
   background-color: #2e2b2b;
   color: white;

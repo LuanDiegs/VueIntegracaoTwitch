@@ -1,6 +1,7 @@
+import { ConstantesPadrao } from "./constantes";
 import { getLocalStorage } from "./localStorageChat";
 
-export function criaUrlTokenTwitch(){
+export function criaUrlTokenTwitch(nomeDoCanal){
     var rand = function() {return Math.random().toString(36).substr(2);};
     var token = function() {return rand() + rand();};
     var path = window.location.pathname;
@@ -16,6 +17,6 @@ export function criaUrlTokenTwitch(){
 
     window.location.href = urlVincular;
 
-    const nomeCanalSalvo = getLocalStorage("canal");
-    if(nomeCanalSalvo) document.getElementById("canal").value = nomeCanalSalvo;
+    const nomeCanalSalvo = getLocalStorage(ConstantesPadrao.localStorageSalvamentoCanal);
+    if(nomeCanalSalvo) nomeDoCanal = nomeCanalSalvo;
 }

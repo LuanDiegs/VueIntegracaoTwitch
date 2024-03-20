@@ -6,7 +6,7 @@ defineProps({
   funcao: {
     type: Function,
     default(){
-      console.log("Funcionalidade não implementada");
+      alert("Funcionalidade não implementada");
       return;
     }
   }
@@ -27,9 +27,9 @@ defineProps({
   margin-top: 1%;
   margin-bottom: 1%;
   color: white;
-  border: 1px solid #5935FC ;
+  border: 1px solid #643cc3 ;
   border-radius: 5px;
-  background-color: #5935FC;
+  background-color: #643cc3;
 }
 
 #vincularCanal:hover{

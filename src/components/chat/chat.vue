@@ -6,6 +6,9 @@ import { getLocalStorage } from '@/assets/js/localStorageChat';
 import { onMounted, ref } from 'vue';
 import SimpleBar from "simplebar-vue";
 import "simplebar-vue/dist/simplebar.min.css";
+import { ConstantesPadrao } from '@/assets/js/constantes';
+import VueSweetalert2 from 'vue-sweetalert2';
+import { notificacaoToast } from '@/assets/js/notificacaoToast';
 
 let chatTitulo = ref(null);
 let canalInput = ref(null);
@@ -15,22 +18,27 @@ defineProps({
 })
 
 onMounted(() => {
-  if(getLocalStorage("canal")){
-    logaNaTwitch();
+  var localStorageChat = getLocalStorage(ConstantesPadrao.localStorageSalvamentoCanal);
+  if(localStorageChat){
+    logaNaTwitch(simpleBarChat.value.SimpleBar.el, chatTitulo, canalInput.value);
     setCanal();
+    notificacaoToast(`Vinculado com sucesso em ${localStorageChat }!`, "success");
+  }else{
+    chatTitulo = "Integração com a Twitch em Vue!";
   }
 })
 
 function setCanal(){
-  chatTitulo = "Canal: " + getLocalStorage("canal");
-  canalInput.value.value = getLocalStorage("canal");
+  var nomeCanal = getLocalStorage(ConstantesPadrao.localStorageSalvamentoCanal);
+
+  chatTitulo = "Canal: " + nomeCanal;
+  canalInput.value.value = nomeCanal;
 }
 
 function vinculaCanalTwitch() {
-  salvaNomeCanal();
-  criaUrlTokenTwitch();
+  salvaNomeCanal(canalInput.value.value);
+  criaUrlTokenTwitch(canalInput.value.value);
 }
-
 </script>
 
 <template>

@@ -1,6 +1,5 @@
 <script setup>
 import chat from './components/chat/chat.vue';
-
 </script>
 
 <template>
